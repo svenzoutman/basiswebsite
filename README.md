@@ -1,5 +1,5 @@
 # Procesverslag
-**Auteur:** -jouw naam-
+**Auteur:** -Sven Zoutman-
 
 **De opdrachten:** [opdracht 1](opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
 
@@ -14,9 +14,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Bronnenlijst
-  1. -bron 1-
-  2. -bron 2-
-  3. -...-
+  1. -https://hyperpix.net/fonts/xbox-one-font/-
+  2. -https://codersblock.com/blog/creating-glow-effects-with-css/-
+  3. -https://usbrandcolors.com/xbox-one-colors/-
+  4. -https://developer.mozilla.org/en-US/docs/Web/CSS/--*-
+  5. -https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations- 
+  6. -https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction-
+  7. -https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion-
+  8. -https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state?retiredLocale=nl-
 
 
 
@@ -27,15 +32,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je storyboard:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="storyboard voor opdracht 1">
+  <img src="readme-images/storyboard.png" width="375px" alt="storyboard voor opdracht 1">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Before/After
+  - @keyframes
+  - Custom Properties
  
 </details>
 
