@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="65" viewBox="0 0 65 65">
+  <defs>
+    <clipPath id="clip-iPhone_13_12_Pro_Max_13">
+      <rect width="65" height="65"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_13_12_Pro_Max_13" data-name="iPhone 13, 12 Pro Max – 13" clip-path="url(#clip-iPhone_13_12_Pro_Max_13)">
+    <path id="Icon_awesome-trash" data-name="Icon awesome-trash" d="M30.375,2.25H21.938L21.277.935A1.688,1.688,0,0,0,19.765,0H11.728a1.668,1.668,0,0,0-1.5.935L9.563,2.25H1.125A1.125,1.125,0,0,0,0,3.375v2.25A1.125,1.125,0,0,0,1.125,6.75h29.25A1.125,1.125,0,0,0,31.5,5.625V3.375A1.125,1.125,0,0,0,30.375,2.25ZM3.741,32.836A3.375,3.375,0,0,0,7.109,36H24.391a3.375,3.375,0,0,0,3.368-3.164L29.25,9h-27Z" transform="translate(16.75 14.5)"/>
+  </g>
+</svg>

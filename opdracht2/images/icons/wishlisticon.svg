@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="65" viewBox="0 0 65 65">
+  <defs>
+    <clipPath id="clip-iPhone_13_12_Pro_Max_8">
+      <rect width="65" height="65"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_13_12_Pro_Max_8" data-name="iPhone 13, 12 Pro Max – 8" clip-path="url(#clip-iPhone_13_12_Pro_Max_8)">
+    <path id="Icon_feather-heart" data-name="Icon feather-heart" d="M38.639,7.532a10.354,10.354,0,0,0-14.646,0l-2,2-2-2A10.356,10.356,0,1,0,5.356,22.177l2,2L22,38.819,36.643,24.173l2-2a10.354,10.354,0,0,0,0-14.646Z" transform="translate(10.502 10.842)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+</svg>

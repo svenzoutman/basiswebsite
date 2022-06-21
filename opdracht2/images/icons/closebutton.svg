@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <clipPath id="clip-iPhone_X_XS_11_Pro_4">
+      <rect width="50" height="50"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_X_XS_11_Pro_4" data-name="iPhone X, XS, 11 Pro – 4" clip-path="url(#clip-iPhone_X_XS_11_Pro_4)">
+    <rect width="50" height="50" fill="rgba(255,255,255,0)"/>
+    <path id="Icon_ionic-md-close" data-name="Icon ionic-md-close" d="M35.473,10.318,32.679,7.523,21.5,18.7,10.318,7.523,7.523,10.318,18.7,21.5,7.523,32.679l2.795,2.795L21.5,24.293l11.18,11.18,2.795-2.795L24.293,21.5Z" transform="translate(3.477 3.477)"/>
+  </g>
+</svg>

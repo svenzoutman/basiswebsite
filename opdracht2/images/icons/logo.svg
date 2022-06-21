@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="65" viewBox="0 0 65 65">
+  <defs>
+    <clipPath id="clip-iPhone_13_12_Pro_Max_10">
+      <rect width="65" height="65"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_13_12_Pro_Max_10" data-name="iPhone 13, 12 Pro Max – 10" clip-path="url(#clip-iPhone_13_12_Pro_Max_10)">
+    <path id="Icon_map-clothing-store" data-name="Icon map-clothing-store" d="M44.1,11.9a1.013,1.013,0,0,1-.179.811l-5.082,7.562a1.13,1.13,0,0,1-.916.453,2.629,2.629,0,0,1-.461-.047l-4.073-1V37.594a.906.906,0,0,1-.943.943h-19.8a.906.906,0,0,1-.943-.943V19.68L8.041,20.689a.862.862,0,0,1-1.028-.405L1.969,12.741a.951.951,0,0,1-.132-.792.92.92,0,0,1,.519-.6L12.642,6.48h4.714a.9.9,0,0,1,.943.943c0,1.942,2.725,3.319,4.667,3.319s4.761-1.367,4.761-3.319a.906.906,0,0,1,.943-.943h4.714l10.183,4.771a1.014,1.014,0,0,1,.528.651Z" transform="translate(9.538 9.992)" fill="none" stroke="#004eff" stroke-width="3"/>
+  </g>
+</svg>

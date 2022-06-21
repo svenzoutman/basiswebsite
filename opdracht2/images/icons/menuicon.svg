@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="65" viewBox="0 0 65 65">
+  <defs>
+    <clipPath id="clip-iPhone_13_12_Pro_Max_6">
+      <rect width="65" height="65"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_13_12_Pro_Max_6" data-name="iPhone 13, 12 Pro Max – 6" clip-path="url(#clip-iPhone_13_12_Pro_Max_6)">
+    <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(5 8.167)">
+      <path id="Path_6" data-name="Path 6" d="M4.5,18h46" transform="translate(0 6.333)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_7" data-name="Path 7" d="M4.5,9h46" transform="translate(0)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_8" data-name="Path 8" d="M4.5,27h46" transform="translate(0 12.667)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

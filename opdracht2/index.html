@@ -1,21 +1,214 @@
 <!doctype html>
 <html lang="nl">
 	
-<head>
-	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Opdracht 2: Interactie galore - Frontend voor Designers</title>
-	
-	<link href="styles/style.css" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Sven Zoutman">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Opdracht 2: Interactie galore - Frontend voor Designers</title>
+		
+		<link href="styles/style.css" rel="stylesheet">
+		<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	</head>
 
-<body>
-	<h1>Opdracht 2</h1>
+	<body>
 
-	<script src="scripts/script.js"></script>
-</body>
+		<header>
+			<p>Sale!</p>
+
+			<nav>
+				<ul>
+					<li><img class="hamburger-menu" src="images/icons/menuicon.svg" alt="menu-icon"></li>
+					<li><img src="images/icons/searchicon.svg" alt="search-icon"></li>
+					<li><img src="images/icons/logo.svg" alt="logo"></li>
+					<li class="bx-wishlist" id="wishlist-icon"><img src="images/icons/wishlisticon.svg" alt="wishlist-icon"></li>
+					<li class="bx-shopping-bag" id="cart-icon"><img src="images/icons/shoppingbag.svg" alt="shoppingbag-icon"></li>
+				</ul>
+
+					<ul class="standard-menu" id="wishlist-list">
+						<li><a href="#">home</a></li>
+						<li><a href="#">men</a></li>
+						<li><a href="#">woman</a></li>
+						<li><a href="#">kids</a></li>
+						<li><button><img src="images/icons/closebutton.svg" alt="close-button"></button></li>
+					</ul>
+
+
+					<div class="wishlist">
+						<h2 class="wishlist-title">Your Wishlist</h2>
+						<!-- Content -->
+						<div class="wishlist-content">
+
+						</div>
+						
+						<!-- Buy Button -->
+						<button type="button" id="close-wishlist">Close Wishlist</button>
+						<!-- Cart Close -->
+						<!-- <button class='bx bx-x' id="close-wishlist"><img src="images/icons/closebutton.svg" alt="close-button"></button> -->
+					</div>
+
+
+					<div class="cart">
+						<h2 class="cart-title">Your Cart</h2>
+						<!-- Content -->
+						<div class="cart-content">
+
+						</div>
+						<!-- Total -->
+						<div class="total">
+								<div class="total-title">Total</div>
+								<div class="total-price">€0</div>
+						</div>
+						<!-- Buy Button -->
+						<button type="button" class="btn-buy">Buy Now</button>
+						<!-- Cart Close -->
+						<button class='bx bx-x' id="close-cart"><img src="images/icons/closebutton.svg" alt="close-button"></button>
+					</div>
+
+			</nav>
+
+		</header>
+
+		<main id="products">
+
+			<h1>t-shirts</h1>
+
+			<button><img src="images/icons/filtericon.svg" alt="filter-icon">filter</button>
+
+				<form class="showFilter" action="index.html">
+					<input type="text" class="search" placeholder="Search">
+
+					<ul id="sortButtons">
+						<li class="sort" data-sort="list">new</li>
+						<li class="sort" data-sort="name">name</li>
+						<li class="sort" data-sort="price">price</li>
+					</ul>
+
+					<details>
+						<summary>brand</summary>
+
+						<input type="checkbox" checked name="filter" value="stoneisland" id="stoneisland">
+						<label for="stoneisland">stone island</label>
+
+						<input type="checkbox" checked name="filter" value="cpcompany" id="cpcompany">
+						<label for="cpcompany">c.p. company</label>
+
+						<input type="checkbox" checked name="filter" value="acoldwall" id="acoldwall">
+						<label for="acoldwall">a-cold-wall*</label>
+					</details>
+
+					<details>
+						<summary>color</summary>
+
+						<input type="checkbox" checked name="filter" value="black" id="black">
+						<label for="black">black</label>
+
+						<input type="checkbox" checked name="filter" value="grey" id="grey">
+						<label for="grey">grey</label>
+
+						<input type="checkbox" checked name="filter" value="white" id="white">
+						<label for="white">white</label>
+
+						<input type="checkbox" checked name="filter" value="orange" id="orange">
+						<label for="orange">orange</label>
+
+						<input type="checkbox" checked name="filter" value="pink" id="pink">
+						<label for="pink">pink</label>
+					</details>
+
+					<details>
+						<summary>price</summary>
+
+						<input type="checkbox" name="filter" value="0-50" id="050">
+						<label for="0-50">€0 - €50</label>
+
+						<input type="checkbox" name="filter" value="50-100" id="50100">
+						<label for="50-100">€50 - €100</label>
+
+						<input type="checkbox" name="filter" value="100-150" id="100150">
+						<label for="100-150">€100 - €150</label>
+
+						<input type="checkbox" name="filter" value="150+" id="150">
+						<label for="150+">€150+</label>
+					</details>
+
+					<button id="saveFilter">save & exit</button>
+				</form>
+
+				<ul class="list recommended" id="productList">
+					<li class="stoneisland black 100-150 favorite-checkbox allbrands">
+							<input type="checkbox" class="add-wishlist">
+						<!-- <img class="wishlist-icon" src="images/icons/wishlisticon.svg" alt="wishlist icon"> -->
+						<div>
+							<img src="images/mosaic-stoneisland-black.jpeg" alt="Afbeeldingproduct" class="product-img"></img>
+							<img src="images/artikel1zoomin.jpg" alt="Afbeeldingproduct"></img>
+						</div>
+						<h4 class="brand">stone island</h4>
+						<h3 class="product-title name">mosaic four print tee</h3>
+						<p class="color">black</p>
+						<p class="price">€120</p>
+						<button class="add-cart"><img src="images/icons/shoppingbasket.svg" alt="shopping-basket"></button>
+					</li>
+
+
+					<li class="stoneisland pink 100-150 list-item allbrands">
+						<input type="checkbox" name="favorite" value="like" id="favorite-checkbox">
+						<img src="images/tricromia-stoneisland-pink.jpeg" alt="Afbeeldingproduct">
+						<h3 class="name">tricromia print tee</h3>
+						<h4 class="brand">stone island</h4>
+						<p class="color">pink</p>
+						<p class="price">€145</p>
+					</li>
+
+					<li class="acoldwall orange 100-150 list-item allbrands">
+						<input type="checkbox" name="favorite" value="like" id="favorite-checkbox">
+						<img src="images/acoldwall-logotee-orange.jpeg" alt="Afbeeldingproduct">
+						<h3 class="name">logo tee</h3>
+						<h4 class="brand">a-cold-wall*</h4>
+						<p class="color">orange</p>
+						<p class="price">€130</p>
+					</li>
+
+					<li class="acoldwall grey 100-150 list-item allbrands">
+						<input type="checkbox" name="favorite" value="like" id="favorite-checkbox">
+						<img src="images/acoldwall-logotee-grey.jpeg" alt="Afbeeldingproduct">
+						<h3 class="name">logo tee</h3>
+						<h4 class="brand">a-cold-wall*</h4>
+						<p class="color">grey</p>
+						<p class="price">€130</p>
+					</li>
+
+					<li class="cpcompany white 100-150 list-item allbrands">
+						<input type="checkbox" name="favorite" value="like" id="favorite-checkbox">
+						<img src="images/metropolis-cpcompany-white.jpeg" alt="Afbeeldingproduct">
+						<h3 class="name">metropolis modular tee</h3>
+						<h4 class="brand">c.p. company</h4>
+						<p class="color">white</p>
+						<p class="price">€145</p>
+					</li>
+
+					<li class="cpcompany black 100-150 list-item allbrands">
+						<input type="checkbox" name="favorite" value="like" id="favorite-checkbox">
+						<img src="images/metropolis-cpcompany-black.jpeg" alt="Afbeeldingproduct">
+						<h3 class="name">metropolis logo diagram tee</h3>
+						<h4 class="brand">c.p. company</h4>
+						<p class="color">black</p>
+						<p class="price">€129</p>
+					</li>
+				</ul>
+
+		</main>
+
+		<footer>
+
+			
+
+		</footer>
+
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.js" integrity="sha512-bvQAGUdz84PpeKWrShm1eEp20Fkcv7PJespsVWVtkTB74C8rNmg75Hru8w1AXnfiNHXnT/XF2jqZskyU3bIaMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="scripts/script.js"></script>
+	</body>
 	
 </html>
