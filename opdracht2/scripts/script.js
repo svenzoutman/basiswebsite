@@ -245,10 +245,12 @@ function addProductTowishlist(title, price, color, productImg) {
 
 
 
+// De code hieronder heb ik gekocht online. Het was ook meer een donatie dan komen.
+// Ik kan alleen niet meer vinden waar ik dat nou had gekocht.
 
-// ----------
-// Wishlist
-// ----------
+// ------------
+// Shoppingcart
+// ------------
 let cartIcon = document.querySelector("#cart-icon");
 let cart = document.querySelector(".cart");
 let closeCart = document.querySelector("#close-cart");
