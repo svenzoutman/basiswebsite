@@ -1,22 +1,23 @@
 // JavaScript Document
 console.log("hallo");
 
+// ----------
+// Menu
+// ----------
 let buttonMenu = document.querySelector('header nav ul li:first-of-type')
 let closeButtonMenu = document.querySelector('.standard-menu li:last-of-type')
 
 function openMenu() {
 	document.body.classList.toggle('toonMenu')
-	// document.body.classList.toggle('socialmedia-hamburgermenu')
 }
 
 buttonMenu.addEventListener('click', openMenu)
 closeButtonMenu.addEventListener('click', openMenu)
 
 
-
-
-
-
+// ----------
+// Filtermenu
+// ----------
 let buttonFilter = document.querySelector('main button:first-of-type')
 let closeButtonFilter = document.querySelector('main form button:last-of-type')
 
@@ -33,9 +34,11 @@ document.querySelector("#saveFilter").addEventListener("click", function(event) 
 
 
 
-
+// ----------
+// Search & Sort
+// ----------
 var options = {
-  valueNames: [ 'name', 'price', 'brand' ]
+  valueNames: [ 'list', 'brand', 'price' ]
 };
 
 var userList = new List('products', options);
@@ -44,24 +47,24 @@ var userList = new List('products', options);
 
 
 
+// -----------------
+// Filter Checkboxes
+// -----------------
 
-// Hide the element with classToHide
+// Hide element 
 function hide(classToHide) {	
   [].forEach.call(document.getElementsByClassName(classToHide), function (el) {
   	el.hidden = true;
 	});  
 }
 
-// Show the element with classToShow
+// Show element
 function show(classToShow) {	
   [].forEach.call(document.getElementsByClassName(classToShow), function (el) {
   	el.hidden = false;
 	});  
 }
 
-
-
-// ::: Events :::
 
 // Event for the stoneisland checkbox
 document.getElementById('stoneisland').onchange = function() {
@@ -77,6 +80,17 @@ document.getElementById('cpcompany').onchange = function() {
 document.getElementById('acoldwall').onchange = function() {
 	if (this.checked) show('acoldwall'); else hide('acoldwall');
 }
+
+// Event for the heron preston checkbox
+document.getElementById('heronpreston').onchange = function() {
+	if (this.checked) show('heronpreston'); else hide('heronpreston');
+}
+
+// Event for the ambush checkbox
+document.getElementById('ambush').onchange = function() {
+	if (this.checked) show('ambush'); else hide('ambush');
+}
+
 
 
 // Event for the black checkbox
@@ -99,23 +113,59 @@ document.getElementById('orange').onchange = function() {
 	if (this.checked) show('orange'); else hide('orange');
 }
 
-// Event for the orange checkbox
+// Event for the pink checkbox
 document.getElementById('pink').onchange = function() {
 	if (this.checked) show('pink'); else hide('pink');
+}
+
+// Event for the lavender checkbox
+document.getElementById('lavender').onchange = function() {
+	if (this.checked) show('lavender'); else hide('lavender');
+}
+
+// Event for the brown checkbox
+document.getElementById('brown').onchange = function() {
+	if (this.checked) show('brown'); else hide('brown');
+}
+
+
+
+// Event for the 0-50 checkbox
+document.getElementById('nulVijftig').onchange = function() {
+	if (this.checked) show('nulVijftig'); else hide('nulVijftig');
+}
+
+// Event for the 50-100 checkbox
+document.getElementById('vijftigHonderd').onchange = function() {
+	if (this.checked) show('vijftigHonderd'); else hide('vijftigHonderd');
+}
+
+// Event for the 100-150 checkbox
+document.getElementById('honderdHonderdvijftig').onchange = function() {
+	if (this.checked) show('honderdHonderdvijftig'); else hide('honderdHonderdvijftigk');
+}
+
+// Event for the 150+ checkbox
+document.getElementById('honderdvijftigPlus').onchange = function() {
+	if (this.checked) show('honderdvijftigPlus'); else hide('honderdvijftigPlus');
 }
 
 
 
 
 
-
+// ----------
+// Wishlist
+// ----------
 let wishlistIcon = document.querySelector("#wishlist-icon");
 let wishlist = document.querySelector(".wishlist");
 let closeWishlist = document.querySelector("#close-wishlist");
+
 // Open wishlist
 wishlistIcon.onclick = () => {
   wishlist.classList.add("active");
 };
+
 // Close wishlist
 closeWishlist.onclick = () => {
   wishlist.classList.remove("active");
@@ -137,12 +187,7 @@ function wishlistReady() {
     var button = reomvewishlistButtons[i];
     button.addEventListener("click", removewishlistItem);
   }
-  // Quantity Changes
-  var quantityInputs = document.getElementsByClassName("wishlist-quantity");
-  for (var i = 0; i < quantityInputs.length; i++) {
-    var input = quantityInputs[i];
-    input.addEventListener("change", quantityChanged);
-  }
+
   // Add To wishlist
   var addwishlist = document.getElementsByClassName("add-wishlist");
   for (var i = 0; i < addwishlist.length; i++) {
@@ -150,7 +195,6 @@ function wishlistReady() {
     button.addEventListener("click", addwishlistClicked);
   }
 }
-
 
 // Reomve Items From wishlist
 function removewishlistItem(event) {
@@ -168,6 +212,7 @@ function addwishlistClicked(event) {
   addProductTowishlist(title, price, color, productImg);
   // updatetotal();
 }
+
 function addProductTowishlist(title, price, color, productImg) {
   var wishlistShopBox = document.createElement("div");
   wishlistShopBox.classList.add("wishlist-box");
@@ -175,10 +220,11 @@ function addProductTowishlist(title, price, color, productImg) {
   var wishlistItemsNames = wishlistItems.getElementsByClassName("wishlist-name");
   for (var i = 0; i < wishlistItemsNames.length; i++) {
     if (wishlistItemsNames[i].innerText == title) {
-      alert("You have alwishlistReady add this item to wishlist");
+      alert("You already have this item in your wishlist");
       return;
     }
   }
+
   var wishlistBoxContent = `
                         <img src="${productImg}" alt="" class="wishlist-img">
                         <div class="detail-box">
@@ -188,8 +234,7 @@ function addProductTowishlist(title, price, color, productImg) {
                         </div>
                         
                         <!-- Remove wishlist -->
-                        <input type="checkbox" checked class="wishlist-remove">
-                        <button class="add-cart">Cart</button>`;
+                        <button class='wishlist-remove'>delete</button>`;
                         
   wishlistShopBox.innerHTML = wishlistBoxContent;
   wishlistItems.append(wishlistShopBox);
@@ -201,16 +246,18 @@ function addProductTowishlist(title, price, color, productImg) {
 
 
 
-
-
-
+// ----------
+// Wishlist
+// ----------
 let cartIcon = document.querySelector("#cart-icon");
 let cart = document.querySelector(".cart");
 let closeCart = document.querySelector("#close-cart");
+
 // Open Cart
 cartIcon.onclick = () => {
   cart.classList.add("active");
 };
+
 // Close Cart
 closeCart.onclick = () => {
   cart.classList.remove("active");
@@ -249,6 +296,7 @@ function ready() {
     .getElementsByClassName("btn-buy")[0]
     .addEventListener("click", buyButtonClicked);
 }
+
 // Buy Button
 function buyButtonClicked() {
   alert("Your Order is placed");
@@ -265,6 +313,7 @@ function removeCartItem(event) {
   buttonClicked.parentElement.remove();
   updatetotal();
 }
+
 // Quantity Changes
 function quantityChanged(event) {
   var input = event.target;
@@ -273,6 +322,7 @@ function quantityChanged(event) {
   }
   updatetotal();
 }
+
 // Add To cart
 function addCartClicked(event) {
   var button = event.target;
@@ -283,6 +333,7 @@ function addCartClicked(event) {
   addProductToCart(title, price, productImg);
   updatetotal();
 }
+
 function addProductToCart(title, price, productImg) {
   var cartShopBox = document.createElement("div");
   cartShopBox.classList.add("cart-box");
@@ -290,7 +341,7 @@ function addProductToCart(title, price, productImg) {
   var cartItemsNames = cartItems.getElementsByClassName("cart-name");
   for (var i = 0; i < cartItemsNames.length; i++) {
     if (cartItemsNames[i].innerText == title) {
-      alert("You have already add this item to cart");
+      alert("You have already have this item in your cart");
       return;
     }
   }
@@ -302,7 +353,7 @@ function addProductToCart(title, price, productImg) {
                             <input type="number" value="1" class="cart-quantity">
                         </div>
                         <!-- Remove Cart -->
-                        <button class='cart-remove'><img class='cart-remove' src="images/icons/trashicon.svg" alt="trash-icon"></button>`;
+                        <button class='cart-remove'>delete</button>`;
   cartShopBox.innerHTML = cartBoxContent;
   cartItems.append(cartShopBox);
   cartShopBox
@@ -331,6 +382,3 @@ function updatetotal() {
 
   document.getElementsByClassName("total-price")[0].innerText = "€" + total;
 }
-
-
-

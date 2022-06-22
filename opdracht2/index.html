@@ -44,8 +44,6 @@
 						
 						<!-- Buy Button -->
 						<button type="button" id="close-wishlist">Close Wishlist</button>
-						<!-- Cart Close -->
-						<!-- <button class='bx bx-x' id="close-wishlist"><img src="images/icons/closebutton.svg" alt="close-button"></button> -->
 					</div>
 
 
@@ -63,7 +61,7 @@
 						<!-- Buy Button -->
 						<button type="button" class="btn-buy">Buy Now</button>
 						<!-- Cart Close -->
-						<button class='bx bx-x' id="close-cart"><img src="images/icons/closebutton.svg" alt="close-button"></button>
+						<button id="close-cart"><img src="images/icons/closebutton.svg" alt="close-button"></button>
 					</div>
 
 			</nav>
@@ -74,139 +72,206 @@
 
 			<h1>t-shirts</h1>
 
-			<button><img src="images/icons/filtericon.svg" alt="filter-icon">filter</button>
+			<button class="filterbutton"><img src="images/icons/filtericon.svg" alt="filter-icon">filter</button>
 
 				<form class="showFilter" action="index.html">
+					<!-- Search -->
 					<input type="text" class="search" placeholder="Search">
 
+					<!-- Sort -->
 					<ul id="sortButtons">
 						<li class="sort" data-sort="list">new</li>
-						<li class="sort" data-sort="name">name</li>
+						<li class="sort" data-sort="brand">name</li>
 						<li class="sort" data-sort="price">price</li>
 					</ul>
 
 					<details>
 						<summary>brand</summary>
 
-						<input type="checkbox" checked name="filter" value="stoneisland" id="stoneisland">
-						<label for="stoneisland">stone island</label>
+						<!-- Brand Filter -->
+						<label class="filter-checkboxes" for="stoneisland"><input type="checkbox" name="filter" value="stoneisland" id="stoneisland" checked>stone island</label>
 
-						<input type="checkbox" checked name="filter" value="cpcompany" id="cpcompany">
-						<label for="cpcompany">c.p. company</label>
+						<label class="filter-checkboxes" for="cpcompany"><input type="checkbox" name="filter" value="cpcompany" id="cpcompany" checked>cp company</label>
 
-						<input type="checkbox" checked name="filter" value="acoldwall" id="acoldwall">
-						<label for="acoldwall">a-cold-wall*</label>
+						<label class="filter-checkboxes" for="acoldwall"><input type="checkbox" name="filter" value="acoldwall" id="acoldwall" checked>a-cold-wall*</label>
+
+						<label class="filter-checkboxes" for="heronpreston"><input type="checkbox" name="filter" value="heronpreston" id="heronpreston" checked>heron preston</label>
+
+						<label class="filter-checkboxes" for="ambush"><input type="checkbox" name="filter" value="ambush" id="ambush" checked>ambush</label>
 					</details>
 
 					<details>
 						<summary>color</summary>
 
-						<input type="checkbox" checked name="filter" value="black" id="black">
-						<label for="black">black</label>
+						<!-- Color Filter -->
+						<label class="filter-checkboxes" for="black"><input type="checkbox" name="filter" value="black" id="black" checked>black</label>
 
-						<input type="checkbox" checked name="filter" value="grey" id="grey">
-						<label for="grey">grey</label>
+						<label class="filter-checkboxes" for="grey"><input type="checkbox" name="filter" value="grey" id="grey" checked>grey</label>
 
-						<input type="checkbox" checked name="filter" value="white" id="white">
-						<label for="white">white</label>
+						<label class="filter-checkboxes" for="white"><input type="checkbox" name="filter" value="white" id="white" checked>white</label>
 
-						<input type="checkbox" checked name="filter" value="orange" id="orange">
-						<label for="orange">orange</label>
+						<label class="filter-checkboxes" for="orange"><input type="checkbox" name="filter" value="orange" id="orange" checked>orange</label>
 
-						<input type="checkbox" checked name="filter" value="pink" id="pink">
-						<label for="pink">pink</label>
+						<label class="filter-checkboxes" for="pink"><input type="checkbox" name="filter" value="pink" id="pink" checked>pink</label>
+
+						<label class="filter-checkboxes" for="lavender"><input type="checkbox" name="filter" value="lavender" id="lavender" checked>lavender</label>
+
+						<label class="filter-checkboxes" for="brown"><input type="checkbox" name="filter" value="brown" id="brown" checked>brown</label>
 					</details>
 
 					<details>
 						<summary>price</summary>
 
-						<input type="checkbox" name="filter" value="0-50" id="050">
-						<label for="0-50">€0 - €50</label>
+						<!-- Price Filter -->
+						<label class="filter-checkboxes" for="nulVijftig"><input type="checkbox" name="filter" value="nulVijftig" id="nulVijftig" checked>€0 - €50</label>
 
-						<input type="checkbox" name="filter" value="50-100" id="50100">
-						<label for="50-100">€50 - €100</label>
+						<label class="filter-checkboxes" for="vijftigHonderd"><input type="checkbox" name="filter" value="vijftigHonderd" id="vijftigHonderd" checked>€50 - €100</label>
 
-						<input type="checkbox" name="filter" value="100-150" id="100150">
-						<label for="100-150">€100 - €150</label>
-
-						<input type="checkbox" name="filter" value="150+" id="150">
-						<label for="150+">€150+</label>
+						<label class="filter-checkboxes" for="honderdHonderdvijftig"><input type="checkbox" name="filter" value="honderdHonderdvijftig" id="honderdHonderdvijftig" checked>€100 - €150</label>
+						
+						<label class="filter-checkboxes" for="honderdvijftigPlus"><input type="checkbox" name="filter" value="honderdvijftigPlus" id="honderdvijftigPlus" checked>€150+</label>
 					</details>
 
+					<!-- Close Button Filter -->
 					<button id="saveFilter">save & exit</button>
 				</form>
 
-				<ul class="list recommended" id="productList">
-					<li class="stoneisland black 100-150 favorite-checkbox allbrands">
-							<input type="checkbox" class="add-wishlist">
-						<!-- <img class="wishlist-icon" src="images/icons/wishlisticon.svg" alt="wishlist icon"> -->
+				<!-- All items on the site -->
+				<ul class="list" id="productList">
+				
+					<li class="stoneisland black honderdHonderdvijftig favorite-checkbox list-item">
+						<img src="images/icons/wishlisticonforitems.svg" alt="wishlist-icon" class="add-wishlist">
 						<div>
 							<img src="images/mosaic-stoneisland-black.jpeg" alt="Afbeeldingproduct" class="product-img"></img>
-							<img src="images/artikel1zoomin.jpg" alt="Afbeeldingproduct"></img>
+							<img src="images/mosaic-stoneisland-black-zoomin.jpg" alt="Afbeeldingproduct"></img>
 						</div>
 						<h4 class="brand">stone island</h4>
 						<h3 class="product-title name">mosaic four print tee</h3>
 						<p class="color">black</p>
 						<p class="price">€120</p>
-						<button class="add-cart"><img src="images/icons/shoppingbasket.svg" alt="shopping-basket"></button>
+						<button class="add-cart">buy</button>
 					</li>
 
-
-					<li class="stoneisland pink 100-150 list-item allbrands">
-						<input type="checkbox" name="favorite" value="like" id="favorite-checkbox">
-						<img src="images/tricromia-stoneisland-pink.jpeg" alt="Afbeeldingproduct">
-						<h3 class="name">tricromia print tee</h3>
+					<li class="stoneisland pink honderdHonderdvijftig list-item">
+						<img src="images/icons/wishlisticonforitems.svg" alt="wishlist-icon" class="add-wishlist">
+						<div>
+							<img src="images/tricromia-stoneisland-pink.jpeg" alt="Afbeeldingproduct" class="product-img"></img>
+							<img src="images/tricromia-stoneisland-pink-zoomin.jpeg" alt="Afbeeldingproduct"></img>
+						</div>
 						<h4 class="brand">stone island</h4>
+						<h3 class="product-title name">tricromia print tee</h3>
 						<p class="color">pink</p>
 						<p class="price">€145</p>
+						<button class="add-cart">buy</button>
 					</li>
 
-					<li class="acoldwall orange 100-150 list-item allbrands">
-						<input type="checkbox" name="favorite" value="like" id="favorite-checkbox">
-						<img src="images/acoldwall-logotee-orange.jpeg" alt="Afbeeldingproduct">
-						<h3 class="name">logo tee</h3>
+					<li class="acoldwall orange honderdHonderdvijftig list-item">
+						<img src="images/icons/wishlisticonforitems.svg" alt="wishlist-icon" class="add-wishlist">
+						<div>
+							<img src="images/acoldwall-logotee-orange.jpeg" alt="Afbeeldingproduct" class="product-img"></img>
+							<img src="images/acoldwall-logotee-orange-zoomin.jpeg" alt="Afbeeldingproduct"></img>
+						</div>
 						<h4 class="brand">a-cold-wall*</h4>
+						<h3 class="product-title name">logo tee</h3>
 						<p class="color">orange</p>
 						<p class="price">€130</p>
+						<button class="add-cart">buy</button>
 					</li>
 
-					<li class="acoldwall grey 100-150 list-item allbrands">
-						<input type="checkbox" name="favorite" value="like" id="favorite-checkbox">
-						<img src="images/acoldwall-logotee-grey.jpeg" alt="Afbeeldingproduct">
-						<h3 class="name">logo tee</h3>
+					<li class="acoldwall grey honderdHonderdvijftig list-item">
+						<img src="images/icons/wishlisticonforitems.svg" alt="wishlist-icon" class="add-wishlist">
+						<div>
+							<img src="images/acoldwall-logotee-grey.jpeg" alt="Afbeeldingproduct" class="product-img"></img>
+							<img src="images/acoldwall-logotee-grey-zoomin.jpeg" alt="Afbeeldingproduct"></img>
+						</div>
 						<h4 class="brand">a-cold-wall*</h4>
+						<h3 class="product-title name">logo tee</h3>
 						<p class="color">grey</p>
 						<p class="price">€130</p>
+						<button class="add-cart">buy</button>
 					</li>
 
-					<li class="cpcompany white 100-150 list-item allbrands">
-						<input type="checkbox" name="favorite" value="like" id="favorite-checkbox">
-						<img src="images/metropolis-cpcompany-white.jpeg" alt="Afbeeldingproduct">
-						<h3 class="name">metropolis modular tee</h3>
+					<li class="cpcompany white honderdHonderdvijftig list-item">
+						<img src="images/icons/wishlisticonforitems.svg" alt="wishlist-icon" class="add-wishlist">
+						<div>
+							<img src="images/metropolis-cpcompany-white.jpeg" alt="Afbeeldingproduct" class="product-img"></img>
+							<img src="images/metropolis-cpcompany-white-zoomin.jpeg" alt="Afbeeldingproduct"></img>
+						</div>
 						<h4 class="brand">c.p. company</h4>
+						<h3 class="product-title name">metropolis modular tee</h3>
 						<p class="color">white</p>
 						<p class="price">€145</p>
+						<button class="add-cart">buy</button>
 					</li>
 
-					<li class="cpcompany black 100-150 list-item allbrands">
-						<input type="checkbox" name="favorite" value="like" id="favorite-checkbox">
-						<img src="images/metropolis-cpcompany-black.jpeg" alt="Afbeeldingproduct">
-						<h3 class="name">metropolis logo diagram tee</h3>
+					<li class="cpcompany black honderdHonderdvijftig list-item">
+						<img src="images/icons/wishlisticonforitems.svg" alt="wishlist-icon" class="add-wishlist">
+						<div>
+							<img src="images/metropolis-cpcompany-black.jpeg" alt="Afbeeldingproduct" class="product-img"></img>
+							<img src="images/metropolis-cpcompany-black-zoomin.jpeg" alt="Afbeeldingproduct"></img>
+						</div>
 						<h4 class="brand">c.p. company</h4>
+						<h3 class="product-title name">metropolis logo diagram tee</h3>
 						<p class="color">black</p>
 						<p class="price">€129</p>
+						<button class="add-cart">buy</button>
+					</li>
+
+					<li class="heronpreston black honderdvijftigPlus list-item">
+						<img src="images/icons/wishlisticonforitems.svg" alt="wishlist-icon" class="add-wishlist">
+						<div>
+							<img src="images/oversizedtee-heronpreston-black.jpeg" alt="Afbeeldingproduct" class="product-img"></img>
+							<img src="images/oversizedtee-heronpreston-black-zoomin.jpeg" alt="Afbeeldingproduct"></img>
+						</div>
+						<h4 class="brand">heron preston</h4>
+						<h3 class="product-title name">oversized tee</h3>
+						<p class="color">black</p>
+						<p class="price">€205</p>
+						<button class="add-cart">buy</button>
+					</li>
+
+					<li class="heronpreston white honderdvijftigPlus list-item">
+						<img src="images/icons/wishlisticonforitems.svg" alt="wishlist-icon" class="add-wishlist">
+						<div>
+							<img src="images/flamingskulltee-heronpreston-white.jpeg" alt="Afbeeldingproduct" class="product-img"></img>
+							<img src="images/flamingskulltee-heronpreston-white-zoomin.jpeg" alt="Afbeeldingproduct"></img>
+						</div>
+						<h4 class="brand">heron preston</h4>
+						<h3 class="product-title name">flaming skull tee</h3>
+						<p class="color">white</p>
+						<p class="price">€280</p>
+						<button class="add-cart">buy</button>
+					</li>
+
+					<li class="ambush lavender honderdvijftigPlus list-item">
+						<img src="images/icons/wishlisticonforitems.svg" alt="wishlist-icon" class="add-wishlist">
+						<div>
+							<img src="images/ambush-workshoplogotee-lavender.jpeg" alt="Afbeeldingproduct" class="product-img"></img>
+							<img src="images/ambush-workshoplogotee-lavender-zoomin.jpeg" alt="Afbeeldingproduct"></img>
+						</div>
+						<h4 class="brand">ambush</h4>
+						<h3 class="product-title name">workshop logo tee</h3>
+						<p class="color">lavender</p>
+						<p class="price">€185</p>
+						<button class="add-cart">buy</button>
+					</li>
+
+					<li class="ambush brown honderdvijftigPlus list-item">
+						<img src="images/icons/wishlisticonforitems.svg" alt="wishlist-icon" class="add-wishlist">
+						<div>
+							<img src="images/ambush-workshoplogotee-brown.jpeg" alt="Afbeeldingproduct" class="product-img"></img>
+							<img src="images/ambush-workshoplogotee-brown-zoomin.jpeg" alt="Afbeeldingproduct"></img>
+						</div>
+						<h4 class="brand">ambush</h4>
+						<h3 class="product-title name">workshop logo tee</h3>
+						<p class="color">brown</p>
+						<p class="price">€185</p>
+						<button class="add-cart">buy</button>
 					</li>
 				</ul>
 
 		</main>
 
-		<footer>
-
-			
-
-		</footer>
-
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.js"></script> -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.js" integrity="sha512-bvQAGUdz84PpeKWrShm1eEp20Fkcv7PJespsVWVtkTB74C8rNmg75Hru8w1AXnfiNHXnT/XF2jqZskyU3bIaMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="scripts/script.js"></script>
 	</body>
