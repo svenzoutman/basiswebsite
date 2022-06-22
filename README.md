@@ -76,8 +76,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Ik heb geleerd hoe before en after werken. En hoe je moet animeren met @keyframes. Custom properties had ik ook nog nooit gebruikt.
   Korte omschrijving met plaatje(s)
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
-
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
@@ -97,7 +95,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je ontwerp:
-  <img src="/readme-images/storyboardopdracht2.png" width="375px" alt="ontwerp opdracht 2">
+  <img src="/readme-images/storyboardopdracht2.png" width="500px" alt="ontwerp opdracht 2">
 
 
   ### Je ambitie: 
