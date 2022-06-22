@@ -113,6 +113,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details>
   <summary>uitwerken na testen (week 7)</summary>
 
+  <img src="/readme-images/formuliervoorkant.jpeg" width="375px" alt="formulier voorkant">
+
+  <img src="/readme-images/formulierachterkant.jpeg" width="375px" alt="formulier achterkant">
+
 
   ### Bevinding 1: Toetsenbord bediening
   Tijdens het testen kon je nog niet met je toetsenbord de site bedienen.
